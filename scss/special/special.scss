@@ -1,0 +1,62 @@
+.special {
+  max-width: 980px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+    h4 {
+      width: 203px;
+      border-bottom: $site-black solid 2px;
+    }
+    .offer {
+      max-width: 772px;
+      min-height: 287px;
+      display: flex;
+      margin-top: 30px;
+        &-image {
+            height: 287px;
+            width: 199px;
+            // background-color: bisque;
+            &.offer1 {
+            @include background("../assets/special-offer-01.jpg");
+            }
+            &.offer2 {
+            @include background("../assets/special-offer-02.jpg");
+            }
+        }
+        &-about{
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &-top{
+                &-header{
+                    display: flex;
+                    justify-content: space-between;
+                    h4 {
+                        width: inherit;
+                        border-bottom: $site-black solid 2px;
+                    }
+                    h5{
+                        padding-top: 25px;
+                    }
+                }
+            }
+            &-info {
+                position: relative;
+                min-height: 50px;
+                width: 100%;
+                p {
+                  width: 385px;
+                  padding-right: 70px;
+                }
+            }
+            button{
+                @include siteButton(133px);
+            }
+        }
+        
+    }
+    .offer:not(:last-child){
+        margin-bottom: 30px;
+    }
+}

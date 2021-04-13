@@ -1,0 +1,106 @@
+.tourpg {
+  max-width: $max-width;
+  // margin: 30px;
+  #tourban {
+    height: 200px;
+    margin: 50px auto 0 auto;
+    display: flex;
+
+    //styling background image
+    @include backgroundDRK("../assets/tour/tours-header.jpg");
+
+    //to center header
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-family: $nova;
+      font-size: 60px;
+      text-transform: uppercase;
+      color: $site-white;
+      font-weight: normal;
+    }
+  }
+  .tours {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    //styling the Tour
+    .promo {
+      height: 304px;
+      width: 236px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+    }
+    .promo:nth-child(-n + 6) {
+      margin-bottom: 55px;
+    }
+
+    //styling the fontcolor and centuring font on tour
+    h2,
+    h3 {
+      color: $site-white;
+      margin: 0 auto;
+    }
+    h2 {
+      margin: 47px auto 0px auto;
+    }
+
+    button {
+      @include siteButton(133px);
+      margin: 56px auto 0px auto;
+    }
+
+    //adding the images for each tour
+    #israelPic {
+      @include backgroundDRK("../assets/tour/tour-01.jpg");
+    }
+    #usaPic {
+      @include backgroundDRK("../assets/tour/tour-02.jpg");
+    }
+    #australiaPic {
+      @include backgroundDRK("../assets/tour/tour-03.jpg");
+    }
+    #kiwiPic {
+      @include backgroundDRK("../assets/tour/tour-04.jpg");
+    }
+    #francePic {
+      @include backgroundDRK("../assets/tour/tour-05.jpg");
+    }
+    #egyptPic {
+      @include backgroundDRK("../assets/tour/tour-06.jpg");
+    }
+    #japanPic {
+      @include backgroundDRK("../assets/tour/tour-07.jpg");
+    }
+    #canadaPic {
+      @include backgroundDRK("../assets/tour/tour-08.jpg");
+    }
+    #uaePic {
+      @include backgroundDRK("../assets/tour/tour-09.jpg");
+    }
+  }
+}
+@media all and (max-width: 1200px) {
+  .tourpg {
+    max-width: 100%;
+    margin: 0 30px;
+    #tourban {
+      max-width: $max-width;
+      // margin: 30px 0;
+    }
+    .tours {
+      flex-direction: column;
+      align-items: center;
+      // background-color: red;
+      .promo:nth-child(-n + 8) {
+        margin-bottom: 55px;
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.blog {
+  max-width: 980px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  h4 {
+    width: 106px;
+    border-bottom: $site-black solid 2px;
+  }
+
+  //offer container
+  .entry {
+    max-width: 772px;
+    min-height: 287px;
+    display: flex;
+    margin-top: 30px;
+    .date {
+      background-color: $site-blue;
+      height: 60px;
+      width: 60px;
+      padding: 10px 20px;
+      color: $site-white;
+      font-family: Gill;
+      &-day {
+        font-size: 22px;
+      }
+      &-month {
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+    }
+
+    &-image {
+      height: 259px;
+      width: 900px;
+      // background-color: bisque;
+      &.offer1 {
+        @include background("../assets/blog.jpg");
+      }
+    }
+    &-about {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &-top {
+        &-header {
+          display: flex;
+          justify-content: space-between;
+          h6 {
+            width: inherit;
+            margin-top: 20px;
+
+            // border-bottom: $site-black solid 2px;
+          }
+        }
+      }
+      &-info {
+        position: relative;
+        min-height: 50px;
+        width: 100%;
+        p {
+          width: 385px;
+          color: $site-blue;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .entry:not(:last-child) {
+    margin-bottom: 100px;
+  }
+}

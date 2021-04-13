@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // border: red 2px solid;
+}
+html,
+body {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $nova;
+  font-weight: normal;
+}
+p {
+  font-family: Gill;
+  font-size: 16px;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: 60px;
+}
+h2 {
+  text-transform: capitalize;
+  font-variant: small-caps;
+  font-size: 60px;
+}
+h3 {
+  text-transform: uppercase;
+  font-size: 30px;
+}
+h4 {
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+h5 {
+  text-transform: lowercase;
+  font-size: 20px;
+  font-family: $nova;
+  color: $site-orange;
+}
+h6 {
+  font-family: Gill;
+  text-transform: capitalize;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  margin: 0 auto;
+}
+
+#margin {
+  max-width: $min-width;
+  margin: 50px auto;
+}
+#border {
+  max-width: $max-width;
+  margin: 50px auto;
+}
+
+@font-face {
+  font-family: Gill;
+  src: url(fonts/GillSans.ttc);
+}
+
+@font-face {
+  font-family: Nova;
+  src: url(fonts/ProximaNovaScOsfExtraCondensed.ttf);
+}
+
+button {
+  font-family: Gill;
+  text-transform: uppercase;
+  background-color: $site-blue;
+  font-size: 15px;
+  border: none;
+  font-weight: bold;
+  color: $site-white;
+}
+
+#underline.wht {
+  border-bottom: $site-white solid 2px;
+}
+#underline.blk {
+  border-bottom: $site-black solid 2px;
+}

@@ -1,0 +1,75 @@
+.about {
+  max-width: 980px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+
+  .about-top-section {
+    margin-bottom: 100px;
+    h1 {
+      width: 150px;
+      border-bottom: $site-black solid 2px;
+    }
+    p {
+      margin: 0 auto;
+    }
+  }
+  .about-bottom-section {
+    h4 {
+      width: 200px;
+      border-bottom: $site-black solid 2px;
+      // margin-bottom: 30px;
+    }
+    p {
+      font-style: italic;
+      margin: 0 auto;
+    }
+    .client {
+      max-width: 772px;
+      min-height: 150px;
+      // margin-bottom: 38px;
+      display: flex;
+      //   margin: 0 auto;
+      &-image {
+        height: 150px;
+        width: 260px;
+        // background-color: bisque;
+        &.client1 {
+          @include background("../assets/about-client-01.jpg");
+        }
+        &.client2 {
+          @include background("../assets/about-client-02.jpg");
+        }
+      }
+    }
+    .client:first-of-type {
+      margin-bottom: 38px;
+    }
+    .client-quote {
+      position: relative;
+      min-height: 50px;
+      width: 100%;
+      padding-left: 25px;
+
+      p {
+        width: 385px;
+      }
+
+      //adds extra cusion to last paragraph before sig
+      p:last-of-type {
+        margin-bottom: 25px;
+      }
+
+      //signature
+      .client-quote-name {
+        width: 100%;
+        text-align: right;
+        font-family: proxima-nova-extra-condensed, sans-serif;
+        font-size: 20px;
+        font-weight: normal;
+        font-variant: small-caps;
+        color: $site-blue;
+      }
+    }
+  }
+}

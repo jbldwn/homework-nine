@@ -1,0 +1,112 @@
+.booking-form {
+  h2 {
+    margin-top: 65px;
+  }
+  form {
+    min-width: $min-width;
+    font-family: Gill;
+    text-transform: capitalize;
+    color: $site-black;
+    div {
+      display: flex;
+      justify-content: flex-end;
+      margin: 22px 0px 10px 0px;
+    }
+    input,
+    select {
+      padding: 20px;
+      height: 58px;
+      font-family: Gill;
+      text-transform: lowercase;
+      font-size: 18px;
+      border: 1px solid $site-blue;
+    }
+    #name,
+    #country {
+      width: 40%;
+      margin-right: 21px;
+    }
+    #email,
+    #hotel {
+      width: 60%;
+    }
+    .date {
+      width: 85%;
+    }
+    .check-date {
+      height: 21px;
+      width: 15%;
+      align-self: center;
+      // margin-right: 41px;
+    }
+    //adding calendar icon to checkin/out dates
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      background: url(../assets/calendar.svg) no-repeat;
+      width: 19px;
+      height: 19px;
+    }
+    .number-selection {
+      justify-content: space-between;
+      div {
+        justify-content: space-between;
+        width: 25%;
+        margin: 0;
+        .number-needed {
+          width: 50%;
+          align-self: center;
+        }
+      }
+    }
+
+    .select {
+      width: 103px;
+      margin-left: auto;
+      /* needed */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      /* SVG background image for drop-down arrow */
+      background-image: url("../assets/down-arrow.svg");
+      background-size: 0.6em;
+      background-position: calc(100% - 1.3em) center;
+      background-repeat: no-repeat;
+    }
+    #message {
+      width: 100%;
+      height: 192px;
+      // text-align: left;
+      resize: none;
+      padding-bottom: 165px;
+    }
+  }
+  input::placeholder {
+    color: $light-gray;
+    font-family: Gill;
+    font-weight: lighter;
+  }
+  input[type="date"],
+  select[type="number"] {
+    color: $light-gray;
+  }
+
+  button {
+    @include siteButton(100%, 30px, 60px);
+    margin: 37px auto 50px auto;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .booking-form {
+    // background-color: cadetblue;
+    // min-width: 236px;
+    flex-direction: column;
+    margin: 0 auto;
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      min-width: 100%;
+    }
+  }
+}

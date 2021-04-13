@@ -1,0 +1,32 @@
+.hero {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  @include backgroundDRK("../assets/hero.jpg");
+
+  .introContainter {
+    padding: 70px;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: $site-white;
+    h1 {
+      color: $site-white;
+      margin: 0 auto;
+    }
+    p {
+      font-style: italic;
+      margin: 0 auto;
+      text-align: center;
+    }
+    button {
+      @include siteButton(133px);
+      // padding-top: 48px;
+      height: 40px;
+      width: 122px;
+      margin: 0 auto;
+    }
+  }
+}

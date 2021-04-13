@@ -1,0 +1,87 @@
+.japan {
+  #banner {
+    position: relative;
+    max-width: 100%;
+    height: 413px;
+    @include backgroundDRK("../assets/tour/tour-07.jpg");
+    h2,
+    h3 {
+      color: $site-white;
+      margin: 30px;
+    }
+    h2 {
+      margin-bottom: 300px;
+    }
+    h3 {
+      align-items: right;
+      text-align: right;
+      color: $site-white;
+    }
+  }
+
+  //additional package images
+  #subbanner {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+    div {
+      height: 347px;
+      width: 298px;
+      &.ph1 {
+        @include background("../assets/tour/tour-japan/japan-tour-01.jpg");
+      }
+      &.ph2 {
+        @include background("../assets/tour/tour-japan/japan-tour-02.jpg");
+      }
+      &.ph3 {
+        @include background("../assets/tour/tour-japan/japan-tour-03.jpg");
+      }
+    }
+  }
+  #itinerary {
+    width: 100%;
+    .day {
+      margin-bottom: 80px;
+      h2 {
+        width: 171px;
+        border-bottom: $site-black solid 2px;
+        letter-spacing: 0.1em;
+        margin-bottom: 35px;
+        margin-right: 30px;
+      }
+    }
+  }
+  button {
+    @include siteButton(188px);
+    margin: 0 auto 50px auto;
+  }
+}
+@media all and (max-width: 1200px) {
+  .japan {
+    // margin-top: -200px;
+    #mobile {
+      display: flex;
+      #subbanner {
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 15px;
+        div:nth-child(-n + 2) {
+          margin-bottom: 50px;
+        }
+      }
+      #itinerary {
+        margin: 50px auto;
+        flex-direction: column;
+        justify-content: space-between;
+        div {
+          min-height: 347px;
+          margin-bottom: 0;
+          // margin: 50px auto 100px auto;
+        }
+        .day:nth-child(-n + 2) {
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+}
